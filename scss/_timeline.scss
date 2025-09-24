@@ -1,0 +1,108 @@
+
+
+
+
+
+.timeline {
+    display: flex;
+    border-radius: 15px;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 4rem; /* controls spacing between entries */
+    position: relative;
+    background-color: #c7b7a570;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 3.5rem;
+    border-left: 3px solid transparent;
+    min-height: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timeline-item .dot {
+    position: absolute;
+    top: 0.2rem;
+    left: -0.5rem;
+    width: 28px;
+    height: 28px;
+    z-index: 2;
+  }
+  
+  .dot-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+  }
+  
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: -0.15rem;
+    top: 35px;
+    width: 24px;
+    height: 80px;
+    background-image: url("../images/floral-connector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .timeline-item:last-child::after {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 0.7;
+      transform: translateY(0);
+    }
+  }
+  @media (min-width: 768px) {
+    .timeline {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 2rem;
+    }
+    .timeline-item {
+      padding-left: 0;
+      padding-top: 2rem;
+      border-left: none;
+      border-top: 3px solid transparent;
+      min-height: auto;
+      transform: translateX(20px);
+    }
+    .timeline-item.visible {
+      transform: translateX(0);
+    }
+    .timeline-item .dot {
+      left: 10%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    .timeline-item::after {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%) rotate(90deg);
+      width: 150px;
+      height: 20px;
+      background-image: url("../images/floral-connectorhorizontal.svg");
+    }
+  }
+  
+  

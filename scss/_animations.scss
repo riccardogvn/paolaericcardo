@@ -1,0 +1,64 @@
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.page-fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appearStep {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.stage-appear {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+}
+
+// .stage-1 {
+//   animation: appearStep 1s ease 0.5s forwards;
+// }
+
+// .stage-2 {
+//   animation: appearStep 1s ease 1.5s forwards;
+// }
+
+// .stage-3 {
+//   animation: appearStep 1s ease 2.8s forwards;
+// }
+
+// .stage-4 {
+//   animation: appearStep 1s ease 4.2s forwards;
+// }

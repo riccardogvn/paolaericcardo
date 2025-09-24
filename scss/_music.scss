@@ -1,0 +1,46 @@
+
+.play-music-btn {
+  font-family: "Gliphic", sans-serif;
+  font-size: 1rem;
+  background-color: #6e2e2b;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.play-music-btn:hover {
+  background-color: #49201c;
+}
+
+.floating-music {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.floating-music.playing {
+  animation: pulse-glow 3s ease-in-out infinite;
+  transform: translateX(-50%) scale(1.02);
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 6px rgba(110, 46, 43, 0.1);
+  }
+  40% {
+    box-shadow: 0 0 15px rgba(120, 53, 50, 0.34);
+  }
+  60% {
+    box-shadow: 0 0 25px rgb(192, 94, 89);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(110, 46, 43, 0.1);
+  }
+}
