@@ -1,0 +1,21 @@
+<div class="map-3d-container">
+      <gmp-map-3d
+        style="width: 100%; height: 400px;"
+        mode="hybrid"
+        center="    45.71494054101342, 9.775118355821407,380.7685507169284"
+        range="291.2750234933629"
+        tilt="70.52793221975124"
+        heading="157.78360643218937">
+      </gmp-map-3d>
+    </div>
+    <div class="map-3d-wrapper">
+      <gmp-map-3d
+        id="contactMap"
+        style="display: block; width: 100%; height: 400px;"        
+        mode="hybrid"
+        center="45.70174494183985,9.79465715169983,380.7685507169284"
+        range="291.2750234933629"
+        tilt="70.52793221975124"
+        heading="157.78360643218937">
+      </gmp-map-3d>
+    </div>
